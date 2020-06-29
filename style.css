@@ -1,0 +1,16 @@
+body
+{
+    font-family: 'Piedra', cursive;
+    background-color: aqua;
+    scroll-behavior: smooth; 
+ 
+}
+.d1{
+    color: pink;
+}
+.d2{
+    color: pink;
+}
+.d3{
+    color: yellow;
+}

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+
+
+    
+  </head>
+  <body>
+    
+    
+    <div class="row  text-center">
+        <div class="col-lg-12">
+            <h1 class="d3">
+                Dice Game
+            </h1>
+
+            <h1>
+                Click Button to start Game
+            </h1>
+        </div>
+
+
+
+        
+
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-4" style="margin-top:100px;">
+            <h2 class="d1">
+                Player 1
+            </h2>
+
+
+            <img id="img1" class="rounded mx-auto d-block" width="150px" height="150px" src="dice1.png" alt="">
+        </div>
+
+
+         <div class="col-lg-4" style="margin-top:100px;">
+            <h2 class="d2">
+                Player 2
+            </h2>
+            
+           <img id="img2" class="rounded mx-auto d-block" width="150px" height="150px" src="dice1.png" alt="">
+        </div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-12" style="margin-top:100px">
+            <button onclick="playgame()" class="btn btn-primary mx-auto d-block">
+                Play Game
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function playgame()
+        {
+            var random1 = Math.ceil(Math.random()*6);
+
+            var image1 = "dice"+random1+".png";
+
+            document.getElementById("img1").setAttribute("src",image1);
+             
+            var random2 = Math.ceil(Math.random()*6);
+
+             var image2 = "dice"+random2+".png";
+
+              document.getElementById("img2").setAttribute("src",image2);
+ 
+              if(random1>random2)
+              {
+                  document.getElementsByTagName("h1")[1].innerHTML = "player 1 win";
+              }
+              else if(random2 == random1)
+              {
+                  document.getElementsByTagName("h1")[1].innerHTML = "Match Draw";
+              }
+              else
+              {
+                document.getElementsByTagName("h1")[1].innerHTML = "Player 2 win";
+                
+                
+              }
+    
+        }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
